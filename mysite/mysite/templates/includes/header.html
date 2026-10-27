@@ -1,0 +1,16 @@
+{% load wagtailcore_tags %}
+
+<!-- 1. On récupère le site actuel géré par Wagtail sous le nom "current_site" -->
+{% wagtail_site as current_site %}
+
+<header>
+    <nav>
+        <!-- 2. On fait le lien vers la page d'accueil du site -->
+        <a href="{% pageurl current_site.root_page %}">Accueil</a>
+
+        <!-- 3. On boucle sur les pages enfants configurées pour s'afficher dans le menu -->
+        {% for item in current_site.root_page.get_children.live.in_menu %}
+            <a href="{% pageurl item %}">{{ item.title }}</a>
+        {% endfor %}
+    </nav>
+</header>

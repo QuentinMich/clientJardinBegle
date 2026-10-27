@@ -1,13 +1,23 @@
 body {
     font-family: Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #16a03f;
+    margin: 0 !important; 
+    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    padding: 0 20px;
     max-width: 700px;
     margin: 40px auto;
-    padding: 0 20px;
-    color: #2c3e50;
-    background-color: #16a085;
+    flex-grow: 1; 
+    display: block;
 }
 h1 {
-    color: #16a085;
+    color: #16a03f;
 }
 p {
     text-align: justify;
@@ -15,4 +25,44 @@ p {
     background-color: antiquewhite;
     padding: 6px 60px;
     border-radius: 10px;
+}
+/* Style du conteneur du Header */
+header {
+    background-color: antiquewhite;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    font-family: sans-serif;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Alignement de la navigation */
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Style des liens */
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* Effet au survol des liens */
+nav a:hover {
+    color: #0066cc;
+}
+footer {
+    background-color: #07380f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
 }
